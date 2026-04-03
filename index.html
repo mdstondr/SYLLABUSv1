@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syllabus - Der ruhige Desktop-Workspace für Windows</title>
+  <meta name="description" content="Syllabus ist ein ruhiger Desktop-Workspace für Windows: Aufgaben, Notizen, Planung und Fokus in einer klaren Oberfläche." />
+  <meta name="theme-color" content="#09090B" />
+  <link rel="icon" type="image/png" href="assets/branding/syllabus_icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-glow site-glow-a" aria-hidden="true"></div>
+  <div class="site-glow site-glow-b" aria-hidden="true"></div>
+  <div class="site-grid" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand-lockup" href="#top" aria-label="Syllabus">
+        <img src="assets/branding/syllabus_icon.png" alt="Syllabus Icon" class="brand-lockup-img" />
+        <span class="brand-name">Syllabus</span>
+      </a>
+      <a class="btn btn-primary header-cta" href="#download">Zur Beta</a>
+    </div>
+  </header>
+
+  <div class="keyboard-hint" id="keyboard-hint" aria-label="Tastatur-Hinweis">
+    <span class="keyboard-hint-label">Tastatur</span>
+    <span class="keyboard-hint-copy">Pfeiltasten steuern die Seite</span>
+    <span class="keyboard-hint-keys" aria-hidden="true">
+      <span>&uarr;</span>
+      <span>&darr;</span>
+      <span>&larr;</span>
+      <span>&rarr;</span>
+    </span>
+  </div>
+
+  <main id="top">
+    <section class="hero" aria-label="Hero">
+      <div class="hero-layout">
+        <div class="hero-content" data-reveal="drift">
+          <h1>
+            <span>Dein Workflow.</span>
+            <span>Perfekt organisiert.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Aufgaben, Notizen und Planung in einer ruhigen Oberfläche, die sofort zeigt, was gerade Priorität hat.
+          </p>
+        </div>
+
+        <div class="hero-visual" data-reveal="mask" data-delay="1" id="hero-stage-shell" aria-hidden="true">
+          <div class="hero-visual-glow hero-visual-glow-a"></div>
+          <div class="hero-visual-glow hero-visual-glow-b"></div>
+          <div class="hero-visual-grid"></div>
+
+          <div class="hero-stage-stack" id="hero-stage-stack">
+            <span class="hero-badge hero-badge-depth-mid hero-badge-a">ADS</span>
+            <span class="hero-badge hero-badge-depth-near hero-badge-b">BS</span>
+            <span class="hero-badge hero-badge-depth-mid hero-badge-c">DBS</span>
+            <span class="hero-badge hero-badge-depth-far hero-badge-d">STO</span>
+            <span class="hero-badge hero-badge-depth-far hero-badge-e">WEB</span>
+            <span class="hero-badge hero-badge-depth-near hero-badge-f">AI</span>
+            <span class="hero-badge hero-badge-depth-mid hero-badge-g">LAB</span>
+            <span class="hero-badge hero-badge-depth-far hero-badge-i">M1</span>
+            <span class="hero-badge hero-badge-depth-mid hero-badge-j">CTS</span>
+            <span class="hero-badge hero-badge-depth-near hero-badge-k">DOC</span>
+            <span class="hero-badge hero-badge-depth-far hero-badge-l">SEM</span>
+
+            <figure class="hero-overlay hero-overlay-main">
+              <img src="assets/screens/dashboard-overview.png" alt="Syllabus Dashboard-Übersicht" />
+            </figure>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-story" id="produkt" aria-label="Produkt Story">
+      <div class="section-head story-head" data-reveal="mask">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-dot"></span>Produktfluss</p>
+          <h2>Ein Desktop, der vom ersten Blick direkt in konzentrierte Arbeit kippt.</h2>
+        </div>
+        <p class="section-head-copy">
+          Weniger erklären, mehr fühlen: Orientierung, Arbeitsbereich und Zeitstruktur
+          bleiben eine durchgehende Szene.
+        </p>
+      </div>
+
+      <div class="story-acts">
+        <article class="story-act is-current" data-story-act>
+          <div class="story-copy" data-reveal="drift">
+            <p class="story-count">Akt 01</p>
+            <h3>Orientierung ohne Anlauf.</h3>
+            <p>Der Startscreen zeigt sofort Prioritäten, offene Punkte und den nächsten sinnvollen Einstieg.</p>
+          </div>
+
+          <div class="story-visual" data-story-parallax data-reveal="mask">
+            <div class="story-visual-stack story-visual-stack-dashboard">
+              <figure class="story-shot story-shot-main story-shot-main-dashboard">
+                <img src="assets/screens/dashboard-overview.png" alt="Syllabus Dashboard Overview" loading="lazy" />
+              </figure>
+              <figure class="story-shot story-shot-float story-shot-float-top story-shot-float-dashboard">
+                <img src="assets/screens/dashboard-stats.png" alt="Syllabus Dashboard-Statistik" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="story-act story-act-copy-right" data-story-act>
+          <div class="story-copy" data-reveal="drift">
+            <p class="story-count">Akt 02</p>
+            <h3>Ein Bereich wird zum Arbeitsplatz.</h3>
+            <p>Dateien, Aufgaben und Notizen bleiben in derselben Oberfläche, statt sich über Fenster und Tabs zu verteilen.</p>
+          </div>
+
+          <div class="story-visual" data-story-parallax data-reveal="mask">
+            <div class="story-visual-stack story-visual-stack-module">
+              <figure class="story-shot story-shot-main story-shot-main-module">
+                <img src="assets/screens/module-workspace.png" alt="Syllabus Modul Workspace" loading="lazy" />
+              </figure>
+              <figure class="story-shot story-shot-float story-shot-float-bottom story-shot-float-notes">
+                <img src="assets/screens/notes.png" alt="Syllabus Notizen" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="story-act" data-story-act>
+          <div class="story-copy" data-reveal="drift">
+            <p class="story-count">Akt 03</p>
+            <h3>Planung bleibt Teil des Flows.</h3>
+            <p>Zeitplanung, Deadlines und Aufgaben führen direkt zum nächsten Schritt, statt den Arbeitsfluss zu unterbrechen.</p>
+          </div>
+
+          <div class="story-visual" data-story-parallax data-reveal="mask">
+            <div class="story-visual-stack story-visual-stack-planning">
+              <figure class="story-shot story-shot-main story-shot-main-planning">
+                <img src="assets/screens/calendar.png" alt="Syllabus Kalender" loading="lazy" />
+              </figure>
+              <figure class="story-shot story-shot-float story-shot-float-top story-shot-float-tasks">
+                <img src="assets/screens/tasks.png" alt="Syllabus Aufgaben" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-showcase" id="showcase" aria-label="Interaktiver Showcase">
+      <div class="section-head" data-reveal="mask">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-dot"></span>Interaktiver Showcase</p>
+          <h2>Sechs echte Screens. Eine Oberfläche, die sich live anfühlt.</h2>
+        </div>
+        <p class="section-head-copy">
+          Der zentrale Proof bleibt interaktiv: echte Ansichten, echte Bewegung und
+          ein Arbeitsfluss, der sich direkt im Produkt erklärt.
+        </p>
+      </div>
+
+      <div class="showcase-layout">
+        <div class="showcase-stage-shell" data-reveal="mask" data-delay="1">
+          <div class="showcase-copy-panel showcase-copy-floating" aria-live="polite">
+            <div class="showcase-copy-meta">
+              <p class="showcase-copy-countline"><span class="showcase-copy-count" id="showcase-current-count">01</span><span class="showcase-copy-total">/ 06</span></p>
+            </div>
+            <p class="showcase-copy-kicker" id="showcase-copy-kicker">Startansicht mit Klarheit</p>
+            <h3 class="showcase-copy-title" id="showcase-copy-title">Dashboard mit direktem Überblick</h3>
+            <p class="showcase-copy-body" id="showcase-copy-body">Alles Wichtige sitzt in einer Sicht: offene Punkte, aktive Bereiche, Fokuszeit und nächste Termine.</p>
+
+            <div class="showcase-copy-points">
+              <div class="showcase-copy-point" id="showcase-point-a">Aufgaben, Fokuszeit und Termine sofort lesbar.</div>
+              <div class="showcase-copy-point" id="showcase-point-b">Direkte Einstiege in Bereiche, Planung und Sessions.</div>
+              <div class="showcase-copy-point" id="showcase-point-c">Ein Startscreen statt verteiltem Tool-Chaos.</div>
+            </div>
+
+            <div class="showcase-progress" aria-hidden="true">
+              <span class="showcase-progress-dot active"></span>
+              <span class="showcase-progress-dot"></span>
+              <span class="showcase-progress-dot"></span>
+              <span class="showcase-progress-dot"></span>
+              <span class="showcase-progress-dot"></span>
+              <span class="showcase-progress-dot"></span>
+            </div>
+          </div>
+
+          <button class="showcase-arrow showcase-arrow-prev" type="button" aria-label="Vorheriger Screen">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+
+          <div class="hero-stage showcase-stage-visual" tabindex="0" role="group" aria-label="Interaktiver Showcase mit sechs Screens">
+            <div class="hero-stage-glow hero-stage-glow-a" aria-hidden="true"></div>
+            <div class="hero-stage-glow hero-stage-glow-b" aria-hidden="true"></div>
+
+            <div class="hero-mockup-wrap" id="showcase-mockup">
+              <div class="hero-screen-stack">
+                <figure class="hero-screen is-current" data-showcase-shot-panel="dashboard" data-showcase-index="01" data-showcase-caption="Heute im Blick" data-showcase-kicker="Startansicht mit Klarheit" data-showcase-title="Dashboard mit direktem Überblick" data-showcase-body="Alles Wichtige sitzt in einer Sicht: offene Punkte, aktive Bereiche, Fokuszeit und nächste Termine." data-showcase-point-a="Aufgaben, Fokuszeit und Termine sofort lesbar." data-showcase-point-b="Direkte Einstiege in Bereiche, Planung und Sessions." data-showcase-point-c="Ein Startscreen statt verteiltem Tool-Chaos.">
+                  <img src="assets/screens/dashboard-overview.png" alt="Syllabus Dashboard-Übersicht" />
+                </figure>
+                <figure class="hero-screen" data-showcase-shot-panel="stats" data-showcase-index="02" data-showcase-caption="Fortschritt lesen" data-showcase-kicker="Rhythmus sichtbar" data-showcase-title="Aktivität und Fokus im Blick" data-showcase-body="Die Statistik zeigt, wie Arbeit, Routinen und Fokuszeit wirklich zusammenlaufen, statt nur geplant zu bleiben." data-showcase-point-a="Entwicklung und Sessions schnell erfassbar." data-showcase-point-b="Fokus bekommt einen klaren Kontext." data-showcase-point-c="Fortschritt wirkt konkret statt abstrakt.">
+                  <img src="assets/screens/dashboard-stats.png" alt="Syllabus Dashboard-Statistik" />
+                </figure>
+                <figure class="hero-screen" data-showcase-shot-panel="calendar" data-showcase-index="03" data-showcase-caption="Deadlines lesen" data-showcase-kicker="Zeit klar lesen" data-showcase-title="Termine, Deadlines, Zeitfenster" data-showcase-body="Der Kalender bringt Abgaben, Routinen und Zeitfenster in ein gemeinsames Bild, das ruhig lesbar bleibt." data-showcase-point-a="Monatsblick mit Aufgaben, Sessions und festen Terminen." data-showcase-point-b="Zeitfenster und Deadlines bleiben verbunden." data-showcase-point-c="Planung fühlt sich ruhig und klar an.">
+                  <img src="assets/screens/calendar.png" alt="Syllabus Kalender" />
+                </figure>
+                <figure class="hero-screen" data-showcase-shot-panel="tasks" data-showcase-index="04" data-showcase-caption="Prioritäten fokussieren" data-showcase-kicker="Globale Aufgabenfläche" data-showcase-title="Fälligkeiten mit Kontext" data-showcase-body="Aufgaben werden nicht isoliert gezeigt, sondern zusammen mit Bereich, Priorität und Zeitpunkt gedacht." data-showcase-point-a="Globale Liste mit klaren Bereichsmarkern." data-showcase-point-b="Fälligkeit, Relevanz und Status sofort sichtbar." data-showcase-point-c="Von der Liste direkt in den passenden Arbeitskontext.">
+                  <img src="assets/screens/tasks.png" alt="Syllabus Aufgaben" />
+                </figure>
+                <figure class="hero-screen" data-showcase-shot-panel="notes" data-showcase-index="05" data-showcase-caption="Wissen sofort greifen" data-showcase-kicker="Gedanken bleiben auffindbar" data-showcase-title="Notizen schnell wiederfinden" data-showcase-body="Notizen bleiben auffindbar, lassen sich schnell öffnen und direkt in den Arbeitsfluss ziehen." data-showcase-point-a="Zuletzt genutzt und thematisch geordnet." data-showcase-point-b="Schneller Wiedereinstieg in Inhalte." data-showcase-point-c="Wissen bleibt greifbar statt zu verschwinden.">
+                  <img src="assets/screens/notes.png" alt="Syllabus Notizen" />
+                </figure>
+                <figure class="hero-screen" data-showcase-shot-panel="workspace" data-showcase-index="06" data-showcase-caption="Im Bereich arbeiten" data-showcase-kicker="Tiefe Arbeit ohne Wechsel" data-showcase-title="Arbeitsbereich mit allem, was zählt" data-showcase-body="Dateien, Notizen und Aufgaben leben in einem gemeinsamen Bereich, damit konzentrierte Arbeit nicht durch Systemwechsel bricht." data-showcase-point-a="Alles bleibt nebeneinander im Blick." data-showcase-point-b="Der Kontext bleibt permanent sichtbar." data-showcase-point-c="Fühlt sich nach Arbeitsplatz an, nicht nach Galerie.">
+                  <img src="assets/screens/module-workspace.png" alt="Syllabus Modul-Arbeitsbereich" />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <button class="showcase-arrow showcase-arrow-next" type="button" aria-label="Nächster Screen">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-download" id="download" aria-label="Download">
+      <div class="download-film" data-reveal="mask" data-finale>
+        <div class="download-stage" aria-hidden="true">
+          <div class="download-stage-glow download-stage-glow-a"></div>
+          <div class="download-stage-glow download-stage-glow-b"></div>
+          <div class="download-stage-grid"></div>
+
+          <div class="download-ui download-ui-main">
+            <div class="download-ui-topbar">
+              <span class="download-ui-dot"></span>
+              <span class="download-ui-dot"></span>
+              <span class="download-ui-dot"></span>
+              <span class="download-ui-chip"></span>
+              <span class="download-ui-chip download-ui-chip-wide"></span>
+            </div>
+
+            <div class="download-ui-shell">
+              <div class="download-ui-sidebar">
+                <span class="download-ui-nav is-active"></span>
+                <span class="download-ui-nav"></span>
+                <span class="download-ui-nav"></span>
+                <span class="download-ui-nav"></span>
+                <span class="download-ui-nav"></span>
+              </div>
+
+              <div class="download-ui-canvas">
+                <div class="download-ui-row">
+                  <span class="download-ui-block download-ui-block-wide"></span>
+                  <span class="download-ui-block download-ui-block-medium"></span>
+                  <span class="download-ui-block download-ui-block-small"></span>
+                </div>
+
+                <div class="download-ui-grid">
+                  <div class="download-ui-panel download-ui-panel-large"></div>
+                  <span class="download-ui-panel download-ui-panel-medium"></span>
+                  <span class="download-ui-panel download-ui-panel-medium"></span>
+                  <span class="download-ui-panel download-ui-panel-tall"></span>
+                </div>
+
+                <div class="download-ui-lines">
+                  <span class="download-ui-line is-long"></span>
+                  <span class="download-ui-line"></span>
+                  <span class="download-ui-line is-mid"></span>
+                  <span class="download-ui-line is-short"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="download-ui-download">
+              <span class="download-ui-download-core">
+                <span class="download-ui-download-arrow"></span>
+              </span>
+              <span class="download-ui-download-track">
+                <span class="download-ui-download-progress"></span>
+              </span>
+              <div class="download-ui-download-packets">
+                <span class="download-ui-download-packet"></span>
+                <span class="download-ui-download-packet"></span>
+                <span class="download-ui-download-packet"></span>
+              </div>
+            </div>
+          </div>
+
+          <span class="download-orb download-orb-a"></span>
+          <span class="download-orb download-orb-b"></span>
+        </div>
+
+        <div class="download-card">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>Private Windows Beta</p>
+          <h2>Syllabus Beta für Windows.</h2>
+          <p>
+            Früher Zugriff auf eine ruhige Desktop-Oberfläche, die Aufgaben,
+            Notizen, Planung und Fokus in einem klaren Arbeitsfluss zusammenbringt.
+          </p>
+
+          <div class="download-build-note" aria-label="Build Version">
+            <span>Build</span>
+            <strong>Beta 1.0.13</strong>
+          </div>
+
+          <div class="download-actions">
+            <a class="btn btn-primary" href="downloads/Syllabus_Setup_1.0.13.exe" download>
+              Beta laden
+            </a>
+          </div>
+
+          <div class="download-info-grid" aria-label="Beta Hinweise">
+            <details class="download-info-item">
+              <summary class="download-info-trigger">
+                <span class="download-info-label">Datenschutz</span>
+              </summary>
+              <p>
+                Arbeitsdaten werden im Standardbetrieb lokal auf dem Endgerät
+                gespeichert; eine allgemeine Cloud-Synchronisierung ist nicht
+                Bestandteil dieses Beta-Downloads.
+              </p>
+            </details>
+            <details class="download-info-item">
+              <summary class="download-info-trigger">
+                <span class="download-info-label">Haftungsausschluss</span>
+              </summary>
+              <p>
+                Mit Download und Nutzung entscheidest du dich eigenverantwortlich
+                für diese Vorabversion. Soweit gesetzlich zulässig, wird keine
+                Haftung für Datenverlust, Fehlfunktionen oder Folgeschäden
+                übernommen.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" aria-label="Footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/branding/syllabus_icon.png" alt="Syllabus Icon" />
+        <div>
+          <strong>Syllabus</strong>
+          <p>Der ruhige Desktop-Workspace für Fokus, Planung und Notizen.</p>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer-Navigation">
+        <a href="#top">Nach oben</a>
+        <a href="#produkt">Produkt</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#download">Download</a>
+      </nav>
+      <p class="footer-legal">Syllabus Beta 1.0.13 - Windows Desktop</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
