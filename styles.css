@@ -9027,11 +9027,11 @@ body.is-scrolling .keyboard-hint:not(.is-dismissed) {
 
   .hero-overlay-main img {
     box-shadow: 0 24px 64px rgba(0, 0, 0, .2);
-    clip-path: none;
+    clip-path: polygon(0 33%, 72% 22%, 100% 26%, 100% 87%, 34% 100%, 0 92%);
     object-position: center center;
-    -webkit-mask-image: radial-gradient(ellipse 88% 84% at 54% 50%, #000 48%, rgba(0,0,0,.94) 66%, rgba(0,0,0,.6) 80%, transparent 100%);
-    mask-image: radial-gradient(ellipse 88% 84% at 54% 50%, #000 48%, rgba(0,0,0,.94) 66%, rgba(0,0,0,.6) 80%, transparent 100%);
-    transform: scale(1.03) translate3d(0, 0, 0);
+    -webkit-mask-image: none;
+    mask-image: none;
+    transform: none;
   }
 
   .hero-badge-a {
@@ -9224,6 +9224,16 @@ body.is-scrolling .keyboard-hint:not(.is-dismissed) {
 }
 
 @media (max-width: 640px) {
+  .hero::before {
+    inset: -8% -10% -24%;
+    background:
+      radial-gradient(circle at 74% 36%, rgba(126,231,200,.18) 0%, rgba(126,231,200,0) 30%),
+      radial-gradient(circle at 24% 72%, rgba(143,203,255,.12) 0%, rgba(143,203,255,0) 28%),
+      radial-gradient(ellipse at 56% 46%, rgba(16,22,28,.56) 0%, rgba(10,12,16,.22) 48%, rgba(8,9,12,0) 74%);
+    -webkit-mask-image: radial-gradient(ellipse 118% 88% at 56% 34%, #000 0%, rgba(0,0,0,.96) 54%, rgba(0,0,0,.48) 76%, transparent 100%);
+    mask-image: radial-gradient(ellipse 118% 88% at 56% 34%, #000 0%, rgba(0,0,0,.96) 54%, rgba(0,0,0,.48) 76%, transparent 100%);
+  }
+
   .header-inner {
     gap: 10px;
   }
@@ -9246,15 +9256,21 @@ body.is-scrolling .keyboard-hint:not(.is-dismissed) {
 
   .hero {
     padding-top: 84px;
-    padding-bottom: 44px;
+    padding-bottom: 54px;
+    overflow: clip;
   }
 
   .hero-layout {
-    gap: 18px;
+    position: relative;
+    gap: 0;
+    min-height: 500px;
   }
 
   .hero-content {
-    max-width: 100%;
+    position: relative;
+    z-index: 3;
+    max-width: min(76%, 260px);
+    padding-top: 4px;
   }
 
   .hero-content h1 {
@@ -9262,14 +9278,15 @@ body.is-scrolling .keyboard-hint:not(.is-dismissed) {
   }
 
   .hero-visual {
-    min-height: 236px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    margin-top: -14px;
-    margin-bottom: -18px;
-    -webkit-mask-image: radial-gradient(ellipse 96% 86% at 54% 46%, #000 38%, rgba(0,0,0,.92) 54%, rgba(0,0,0,.5) 70%, transparent 100%);
-    mask-image: radial-gradient(ellipse 96% 86% at 54% 46%, #000 38%, rgba(0,0,0,.92) 54%, rgba(0,0,0,.5) 70%, transparent 100%);
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    left: 0;
+    min-height: 292px;
+    display: block;
+    margin: 0;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 
   .hero-visual-grid {
@@ -9293,24 +9310,29 @@ body.is-scrolling .keyboard-hint:not(.is-dismissed) {
   }
 
   .hero-stage-stack {
-    width: min(86%, 320px);
-    min-height: 236px;
-    margin: 0 auto;
+    width: 100%;
+    min-height: 248px;
+    margin: 0;
   }
 
   .hero-overlay-main {
-    top: 12%;
-    width: min(80%, 266px);
-    border-radius: 18px;
+    top: 18%;
+    left: 42%;
+    width: min(96%, 300px);
+    aspect-ratio: 1;
+    border-radius: 0;
+    overflow: visible;
     opacity: .98;
-    transform: translate3d(-50%, 0, 0) rotateX(3deg) rotateY(-4deg) rotateZ(-.5deg) scale(1);
+    transform: translate3d(-50%, 0, 0) rotateX(1deg) rotateY(-2deg) rotateZ(-.8deg) scale(1);
   }
 
   .hero-overlay-main img {
+    object-fit: cover;
     object-position: center center;
-    -webkit-mask-image: radial-gradient(ellipse 90% 86% at 54% 50%, #000 50%, rgba(0,0,0,.94) 68%, rgba(0,0,0,.56) 82%, transparent 100%);
-    mask-image: radial-gradient(ellipse 90% 86% at 54% 50%, #000 50%, rgba(0,0,0,.94) 68%, rgba(0,0,0,.56) 82%, transparent 100%);
-    transform: scale(1.02) translate3d(0, 0, 0);
+    clip-path: polygon(0 16%, 78% 6%, 100% 10%, 100% 84%, 36% 100%, 0 92%);
+    -webkit-mask-image: none;
+    mask-image: none;
+    transform: none;
   }
 
   .hero-badge-a,
@@ -9322,18 +9344,18 @@ body.is-scrolling .keyboard-hint:not(.is-dismissed) {
   }
 
   .hero-badge-a {
-    top: 12%;
-    left: 6%;
+    top: 26%;
+    left: 10%;
   }
 
   .hero-badge-b {
-    top: 8%;
+    top: 18%;
     right: 2%;
   }
 
   .hero-badge-f {
-    top: 18%;
-    left: -1%;
+    top: 34%;
+    left: 2%;
   }
 
   .story-act,
