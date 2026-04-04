@@ -8933,6 +8933,77 @@ body.is-scrolling .keyboard-hint:not(.is-dismissed) {
 
 /* Responsive stabilization: mobile/tablet use readable stacked sections */
 @media (max-width: 900px) {
+  .hero {
+    min-height: 0;
+    padding-top: 96px;
+    padding-bottom: 52px;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: clamp(22px, 5vw, 32px);
+    min-height: 0;
+    align-items: start;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: min(100%, 640px);
+  }
+
+  .hero-content::after {
+    left: -8%;
+    width: min(62vw, 380px);
+    height: min(42vw, 240px);
+  }
+
+  .hero-content h1 {
+    max-width: 10.5ch;
+  }
+
+  .hero-subtitle {
+    max-width: 34ch;
+  }
+
+  .hero-visual {
+    min-height: clamp(300px, 58vw, 420px);
+    width: 100%;
+  }
+
+  .hero-visual-grid {
+    inset: 8% 4% 10% 4%;
+  }
+
+  .hero-stage-stack {
+    width: min(100%, 680px);
+    min-height: inherit;
+  }
+
+  .hero-overlay-main {
+    top: 14%;
+    left: 50%;
+    width: min(92%, 620px);
+    transform: translate3d(-50%, 0, -40px) rotateX(10deg) rotateY(-16deg) rotateZ(-2deg) scale(1);
+  }
+
+  .hero-badge-a {
+    left: 12%;
+  }
+
+  .hero-badge-b {
+    right: 8%;
+  }
+
+  .hero-badge-f {
+    left: 6%;
+  }
+
+  .section-head {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+
   [data-reveal],
   [data-reveal="mask"],
   [data-reveal="drift"] {
@@ -8957,6 +9028,8 @@ body.is-scrolling .keyboard-hint:not(.is-dismissed) {
   .story-act-reverse,
   .story-act-copy-right {
     gap: 20px;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   .story-visual,
@@ -8981,6 +9054,7 @@ body.is-scrolling .keyboard-hint:not(.is-dismissed) {
     margin: 0;
     animation: none;
     filter: none;
+    transform: none !important;
   }
 
   .story-shot,
@@ -9093,6 +9167,56 @@ body.is-scrolling .keyboard-hint:not(.is-dismissed) {
 }
 
 @media (max-width: 640px) {
+  .header-inner {
+    gap: 10px;
+  }
+
+  .brand-lockup {
+    min-width: 0;
+    padding: 7px 12px 7px 10px;
+  }
+
+  .brand-name {
+    font-size: .84rem;
+  }
+
+  .header-cta {
+    min-width: 0;
+    max-width: 126px;
+    padding: 9px 12px;
+    font-size: .7rem;
+  }
+
+  .hero {
+    padding-top: 84px;
+    padding-bottom: 44px;
+  }
+
+  .hero-layout {
+    gap: 18px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    max-width: 7.6ch;
+  }
+
+  .hero-visual {
+    min-height: 248px;
+  }
+
+  .hero-stage-stack {
+    width: 100%;
+    min-height: 248px;
+  }
+
+  .hero-overlay-main {
+    width: min(100%, 330px);
+  }
+
   .story-act,
   .story-act-reverse,
   .story-act-copy-right {
