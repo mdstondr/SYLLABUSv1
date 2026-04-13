@@ -7,11 +7,16 @@
   const body = document.body;
   const header = document.getElementById('site-header');
   const heroSection = document.querySelector('.hero');
+  const heroPrimaryImage = document.querySelector('.hero-overlay-main img');
+  const heroPrimaryFrame = heroPrimaryImage?.closest('.hero-overlay-main');
   const keyboardHint = document.getElementById('keyboard-hint');
   let scrollSyncFrame = 0;
   let scrollPauseTimer = null;
   let scrollMotionPaused = false;
   let resizeStateTimer = null;
+  const heroFloatAssetMinWidth = 561;
+  const heroFloatAssetMaxWidth = 1100;
+  const heroFloatAssetSrc = 'assets/screens/dashboard-overview-hero-float.png?v=20260413a';
 
   function setScrollMotionPaused(paused) {
     if (scrollMotionPaused === paused) return;
@@ -65,6 +70,28 @@
   }, { passive: true });
   syncHeaderScrollState();
 
+  function syncHeroMockupAsset() {
+    if (!heroPrimaryImage || !heroPrimaryFrame) return;
+
+    if (!heroPrimaryImage.dataset.defaultSrc) {
+      heroPrimaryImage.dataset.defaultSrc = heroPrimaryImage.getAttribute('src') || '';
+    }
+
+    const useFloatingAsset =
+      window.innerWidth >= heroFloatAssetMinWidth &&
+      window.innerWidth <= heroFloatAssetMaxWidth;
+    const nextSrc = useFloatingAsset ? heroFloatAssetSrc : heroPrimaryImage.dataset.defaultSrc;
+
+    if (heroPrimaryImage.getAttribute('src') !== nextSrc) {
+      heroPrimaryImage.setAttribute('src', nextSrc);
+    }
+
+    heroPrimaryFrame.classList.toggle('is-floating-asset', useFloatingAsset);
+    heroPrimaryImage.classList.toggle('is-floating-asset', useFloatingAsset);
+  }
+
+  syncHeroMockupAsset();
+
   if (keyboardHint) {
     document.addEventListener('keydown', (event) => {
       if (!event.key.startsWith('Arrow')) return;
@@ -106,7 +133,10 @@
   }
 
   window.addEventListener('load', syncRevealInView, { once: true });
-  window.addEventListener('resize', syncRevealInView, { passive: true });
+  window.addEventListener('resize', () => {
+    syncHeroMockupAsset();
+    syncRevealInView();
+  }, { passive: true });
   window.requestAnimationFrame(syncRevealInView);
 
   const heroStageShell = document.getElementById('hero-stage-shell');
