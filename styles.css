@@ -11956,7 +11956,7 @@ body.is-resizing .download-orb {
   }
 
   .hero-content {
-    top: 52%;
+    top: 54%;
     left: 12px;
     gap: 10px;
     max-width: min(80vw, 250px);
@@ -11980,10 +11980,14 @@ body.is-resizing .download-orb {
   }
 
   .hero-overlay-main {
-    top: 12%;
-    left: 44%;
-    width: min(70%, 320px);
-    opacity: .78;
+    top: 23%;
+    left: 18%;
+    width: min(66%, 268px);
+    opacity: .74;
+  }
+
+  .hero-overlay-main img {
+    transform: scale(.985) translate3d(0, -.4%, 0);
   }
 
   .hero-badge {
@@ -11991,24 +11995,18 @@ body.is-resizing .download-orb {
   }
 
   .hero-badge-a,
-  .hero-badge-b,
   .hero-badge-g {
     display: inline-flex;
   }
 
   .hero-badge-a {
-    top: 16%;
-    left: 44%;
-  }
-
-  .hero-badge-b {
     top: 15%;
-    right: 8%;
+    left: 43%;
   }
 
   .hero-badge-g {
-    top: 58%;
-    left: 58%;
+    top: 50%;
+    left: 50%;
   }
 
   .section-head {
@@ -12169,8 +12167,15 @@ body.is-resizing .download-orb {
   }
 
   .hero-overlay-main {
-    left: 48%;
-    width: min(72%, 290px);
+    top: 24%;
+    left: 8%;
+    width: min(68%, 216px);
+    transform: translate3d(0, 14px, -124px) rotateX(9deg) rotateY(-10deg) rotateZ(-1.4deg) scale(.94);
+    transform-origin: center center;
+  }
+
+  .hero-overlay-main img {
+    transform: scale(.95) translate3d(0, -.2%, 0);
   }
 
   .section-head h2 {
