@@ -11858,7 +11858,7 @@ body.is-resizing .download-orb {
 
 .section-showcase .hero-screen img {
   clip-path: inset(.45% .45% .65% .45% round clamp(18px, 1.9vw, 24px));
-  transform: scale(1.018) translateY(-5px);
+  transform: scale(1.078) translateY(-11px);
 }
 
 .section-showcase .hero-screen.is-current {
@@ -11922,6 +11922,10 @@ body.is-resizing .download-orb {
   .showcase-copy-title {
     max-width: 10ch;
     font-size: clamp(.96rem, 4.2vw, 1.24rem);
+  }
+
+  .section-showcase .hero-screen img {
+    transform: scale(1.062) translateY(-8px);
   }
 
   .showcase-copy-body,
