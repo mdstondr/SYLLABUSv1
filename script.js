@@ -3,6 +3,7 @@
 
   const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   const desktopSceneMinWidth = 1100;
+  const ambientMotionMinWidth = 0;
 
   const body = document.body;
   const header = document.getElementById('site-header');
@@ -155,7 +156,7 @@
     }
 
     heroStageShell.addEventListener('mousemove', (event) => {
-      if (window.innerWidth < desktopSceneMinWidth || reducedMotionQuery.matches || scrollMotionPaused) return;
+      if (window.innerWidth < ambientMotionMinWidth || reducedMotionQuery.matches || scrollMotionPaused) return;
 
       heroHoverActive = true;
       heroAtRest = false;
@@ -197,7 +198,7 @@
           !heroHoverActive &&
           !scrollMotionPaused &&
           heroMotionVisible &&
-          window.innerWidth >= desktopSceneMinWidth &&
+          window.innerWidth >= ambientMotionMinWidth &&
           !document.hidden
         ) {
           heroFloatAngle += 0.0085;
@@ -523,7 +524,7 @@
     }
 
     showcaseHoverZone.addEventListener('mousemove', (event) => {
-      if (window.innerWidth < desktopSceneMinWidth || reducedMotionQuery.matches || scrollMotionPaused) return;
+      if (window.innerWidth < ambientMotionMinWidth || reducedMotionQuery.matches || scrollMotionPaused) return;
 
       showcasePointerX = event.clientX;
       showcasePointerY = event.clientY;
@@ -568,7 +569,7 @@
       showcaseHoverZone.addEventListener('mouseleave', () => {
       showcaseHovered = false;
 
-      if (window.innerWidth < desktopSceneMinWidth || reducedMotionQuery.matches) {
+      if (window.innerWidth < ambientMotionMinWidth || reducedMotionQuery.matches) {
         if (showcaseMockup) showcaseMockup.style.transform = '';
         if (showcaseCopyPanel) showcaseCopyPanel.style.transform = '';
         showcaseAtRest = true;
@@ -581,7 +582,7 @@
           !showcaseHovered &&
           !scrollMotionPaused &&
           showcaseMotionVisible &&
-          window.innerWidth >= desktopSceneMinWidth &&
+          window.innerWidth >= ambientMotionMinWidth &&
           !document.hidden
         ) {
           const drift = getShowcaseGlobalDrift();
@@ -637,7 +638,7 @@
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth < desktopSceneMinWidth) {
+      if (window.innerWidth < ambientMotionMinWidth) {
         if (showcaseMockup) showcaseMockup.style.transform = '';
         if (showcaseCopyPanel) showcaseCopyPanel.style.transform = '';
         showcaseHovered = false;
