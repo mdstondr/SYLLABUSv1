@@ -11510,13 +11510,15 @@ body.is-resizing .download-orb {
 /* -- HERO SINGLE SCENE SCALING ----------------------------------------- */
 .hero {
   --hero-visual-scale: clamp(.6, calc(.42 + .05vw), 1);
+  padding-top: clamp(46px, 4vw, 70px);
+  padding-bottom: clamp(34px, 4vw, 56px);
   overflow: visible;
 }
 
 .hero-layout {
   position: relative;
   display: block;
-  min-height: clamp(460px, 74vw, 780px);
+  min-height: clamp(420px, 68vw, 720px);
   padding: clamp(0px, .6vw, 8px) clamp(12px, 3vw, 40px) clamp(18px, 3vw, 36px);
   isolation: isolate;
   transform-style: preserve-3d;
@@ -11524,11 +11526,11 @@ body.is-resizing .download-orb {
 
 .hero-content {
   position: absolute;
-  top: 46%;
+  top: 41%;
   left: clamp(16px, 4vw, 54px);
   z-index: 6;
   display: grid;
-  gap: 14px;
+  gap: 12px;
   align-content: start;
   max-width: clamp(260px, 52vw, 900px);
   transform: translateY(-50%);
@@ -11584,7 +11586,7 @@ body.is-resizing .download-orb {
 }
 
 .hero-overlay-main {
-  top: 16%;
+  top: 10%;
   left: 33%;
   right: auto;
   width: min(56%, 700px);
@@ -11691,12 +11693,12 @@ body.is-resizing .download-orb {
 
 @media (max-width: 640px) {
   .hero {
-    padding-top: clamp(76px, 18vw, 92px);
-    padding-bottom: clamp(24px, 8vw, 40px);
+    padding-top: clamp(62px, 14vw, 82px);
+    padding-bottom: clamp(18px, 6vw, 32px);
   }
 
   .hero-layout {
-    min-height: clamp(430px, 132vw, 560px);
+    min-height: clamp(390px, 118vw, 500px);
   }
 }
 
@@ -11947,16 +11949,16 @@ body.is-resizing .download-orb {
 @media (max-width: 480px) {
   .hero {
     --hero-visual-scale: clamp(.46, calc(.18 + .08vw), .62);
-    padding-top: 72px;
-    padding-bottom: 18px;
+    padding-top: 56px;
+    padding-bottom: 10px;
   }
 
   .hero-layout {
-    min-height: clamp(360px, 124vw, 470px);
+    min-height: clamp(410px, 132vw, 520px);
   }
 
   .hero-content {
-    top: 54%;
+    top: 46%;
     left: 12px;
     gap: 10px;
     max-width: min(80vw, 250px);
@@ -11980,7 +11982,7 @@ body.is-resizing .download-orb {
   }
 
   .hero-overlay-main {
-    top: 23%;
+    top: 14%;
     left: 18%;
     width: min(66%, 268px);
     opacity: .74;
@@ -12147,10 +12149,11 @@ body.is-resizing .download-orb {
   }
 
   .hero-layout {
-    min-height: clamp(340px, 122vw, 430px);
+    min-height: clamp(390px, 136vw, 470px);
   }
 
   .hero-content {
+    top: 46%;
     left: 10px;
     max-width: min(78vw, 228px);
   }
@@ -12167,7 +12170,7 @@ body.is-resizing .download-orb {
   }
 
   .hero-overlay-main {
-    top: 24%;
+    top: 16%;
     left: 8%;
     width: min(68%, 216px);
     transform: translate3d(0, 14px, -124px) rotateX(9deg) rotateY(-10deg) rotateZ(-1.4deg) scale(.94);
@@ -12188,5 +12191,176 @@ body.is-resizing .download-orb {
 
   .showcase-copy-panel {
     width: min(64vw, 220px);
+  }
+}
+
+/* -- COPY POLISH -------------------------------------------------------- */
+.hero-subtitle,
+.section-head-copy,
+.story-copy > p:not(.story-count),
+.download-film .download-card > p:not(.eyebrow),
+.footer-brand p {
+  text-wrap: pretty;
+}
+
+.showcase-copy-panel {
+  width: clamp(248px, 31vw, 408px);
+  padding: clamp(18px, 2.3vw, 28px);
+  border-color: rgba(255,255,255,.1);
+  background:
+    radial-gradient(circle at top left, rgba(126,231,200,.15), transparent 34%),
+    linear-gradient(160deg, rgba(18,20,27,.9), rgba(7,9,13,.76));
+  box-shadow:
+    0 44px 120px rgba(0,0,0,.32),
+    inset 0 1px 0 rgba(255,255,255,.08);
+  backdrop-filter: blur(20px) saturate(1.06);
+}
+
+.showcase-copy-kicker {
+  margin-bottom: 8px;
+  color: rgba(214,220,230,.66);
+  letter-spacing: .16em;
+}
+
+.showcase-copy-title {
+  max-width: 10ch;
+  margin-bottom: 10px;
+  line-height: 1.02;
+  letter-spacing: -.03em;
+  text-wrap: balance;
+}
+
+.showcase-copy-body {
+  max-width: 29ch;
+  margin-bottom: 14px;
+  color: rgba(245,247,251,.82);
+  line-height: 1.54;
+  text-wrap: pretty;
+}
+
+.showcase-copy-points {
+  gap: 7px;
+}
+
+.showcase-copy-point {
+  max-width: 28ch;
+  color: rgba(245,247,251,.88);
+  line-height: 1.44;
+  text-wrap: pretty;
+}
+
+.download-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 26px;
+  padding-top: 18px;
+  opacity: 1;
+}
+
+.download-info-item {
+  width: 100%;
+  border-radius: 16px;
+  border-color: rgba(255,255,255,.06);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,.01)),
+    rgba(8,10,15,.32);
+  box-shadow:
+    0 10px 22px rgba(0,0,0,.16),
+    inset 0 1px 0 rgba(255,255,255,.03);
+}
+
+.download-info-trigger {
+  display: flex;
+  width: 100%;
+  padding: 12px 34px 10px 14px;
+  align-items: center;
+}
+
+.download-info-trigger::after {
+  right: 12px;
+  font-size: .72rem;
+  color: rgba(245,247,251,.36);
+}
+
+.download-info-label {
+  color: rgba(245,247,251,.72);
+  font-size: .62rem;
+  letter-spacing: .12em;
+}
+
+.download-info-item p {
+  margin: 0 14px 14px;
+  max-width: none;
+  font-size: .78rem;
+  line-height: 1.5;
+  max-height: 0;
+}
+
+.download-info-item[open] p {
+  max-height: 320px;
+}
+
+@media (max-width: 820px) {
+  .showcase-copy-panel {
+    width: clamp(236px, 34vw, 360px);
+  }
+}
+
+@media (max-width: 640px) {
+  .download-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .download-info-item p {
+    font-size: .76rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .showcase-copy-panel {
+    width: min(68vw, 252px);
+    padding: 13px;
+    min-height: auto;
+  }
+
+  .showcase-copy-kicker {
+    margin-bottom: 6px;
+    font-size: .58rem;
+  }
+
+  .showcase-copy-title {
+    max-width: 10ch;
+    margin-bottom: 8px;
+    font-size: clamp(1rem, 4.7vw, 1.22rem);
+  }
+
+  .showcase-copy-body {
+    margin-bottom: 10px;
+    font-size: .72rem;
+    line-height: 1.42;
+  }
+
+  .showcase-copy-point {
+    font-size: .71rem;
+    line-height: 1.38;
+  }
+
+  .download-info-trigger {
+    padding: 11px 34px 10px 12px;
+  }
+
+  .download-info-label {
+    font-size: .58rem;
+  }
+
+  .download-info-item p {
+    margin: 0 12px 12px;
+    font-size: .72rem;
+    line-height: 1.44;
+  }
+
+  .download-info-item[open] p {
+    max-height: 360px;
   }
 }
